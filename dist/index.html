@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="BreadLabs — We make good shit."
+    />
+    <title>BreadLabs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath fill='%23f6b94c' d='M6 7h20v4h3v5h-2v9H5v-9H3v-5h3z'/%3E%3Cpath fill='%23fff2cd' d='M7 12h18v10H7z'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        background: #000;
+        font-family: "Handjet", monospace;
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        background: #000;
+      }
+
+      body {
+        min-height: 100svh;
+        overflow: hidden;
+      }
+
+      main {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1.25rem;
+      }
+
+      .brand {
+        --pixel-scale: 8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(1.5rem, 4vh, 2.75rem);
+        text-align: center;
+      }
+
+      .brand__mark {
+        display: block;
+        width: calc(43px * var(--pixel-scale));
+        height: calc(47px * var(--pixel-scale));
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+
+      .brand__line {
+        margin: 0;
+        color: #fff;
+        font-size: clamp(2.25rem, 6vw, 4.25rem);
+        font-weight: 600;
+        line-height: 0.95;
+        letter-spacing: 0.015em;
+      }
+
+      @media (max-width: 420px), (max-height: 620px) {
+        .brand {
+          --pixel-scale: 6;
+        }
+      }
+
+      @media (max-width: 310px), (max-height: 490px) {
+        .brand {
+          --pixel-scale: 5;
+          gap: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand">
+        <img
+          class="brand__mark"
+          src="./breadlabs.png"
+          width="43"
+          height="47"
+          alt="BreadLabs pixel-art bread mascot"
+        />
+        <h1 class="brand__line">We make good shit.</h1>
+      </div>
+    </main>
+  </body>
+</html>
